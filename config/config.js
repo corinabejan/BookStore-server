@@ -1,6 +1,6 @@
-require('dotenv').congig();
+require('dotenv').config();
 
-module.exports = {
+ module.exports = {
   "development": {
     "url": process.env.DATABASE_DEV,
     "dialect": "postgres",
