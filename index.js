@@ -5,6 +5,8 @@ const corsMiddleWare = require("cors");
 const { PORT } = require("./config/constants");
 const jsonParser = express.json();
 
+const booksRouter = require('./routers/books');
+
 
 app.use(corsMiddleWare());
 app.use(jsonParser);
@@ -14,6 +16,8 @@ if (process.env.DELAY) {
     setTimeout(() => next(), parseInt(process.env.DELAY));
   });
 }
+
+app.use('/books', booksRouter);
 
 
 app.listen(PORT, () => console.log(`Listening to port ${PORT}`))

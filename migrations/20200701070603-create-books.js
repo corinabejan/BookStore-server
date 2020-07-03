@@ -20,6 +20,12 @@ module.exports = {
       year: {
         type: Sequelize.STRING
       },
+      image: {
+        type: Sequelize.STRING
+      },
+      review: {
+        type: Sequelize.STRING(60000)
+      },
       price: {
         type: Sequelize.STRING
       },
