@@ -6,13 +6,11 @@ module.exports = {
       "orders",
       [
         {
-          total: 25,
           customerId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          total: 20,
           customerId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),

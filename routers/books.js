@@ -22,7 +22,9 @@ router.get("/", async (req, res, next) => {
 router.get("/:id", async (req, res, next) => {
   try {
     const id = req.params.id;
-    const book = await Book.findByPk(id);
+    const book = await Book.findByPk(id, {
+      include: [Category],
+    });
     if (!book) {
       res.status(400).send("Book not found!");
     } else {
@@ -32,6 +34,7 @@ router.get("/:id", async (req, res, next) => {
     next(e);
   }
 });
+
 
 router.post("/", async (request, response, next) => {
   try {
