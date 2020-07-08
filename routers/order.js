@@ -8,6 +8,9 @@ const OrderItem = require("../models").orderItem;
 router.get("/", async (req, res, next) => {
   try {
     const orders = await Order.findAll();
+    if (!orders) {
+      res.status(404).send({ message: "No order was found!" });
+    }
     res.status(200).send({ message: "Order placed!", orders });
   } catch (e) {
     next(e);
@@ -15,7 +18,10 @@ router.get("/", async (req, res, next) => {
 });
 
 router.post("/", async (req, res, next) => {
-  const { customerId, bookIds } = req.body
+  const { customerId, bookIds } = req.body;
+  if (!customerId || !bookIds) {
+    res.status(403).send({ message: "Missing parameters!" });
+  }
   try {
     const newOrder = await Order.create({ customerId });
 
