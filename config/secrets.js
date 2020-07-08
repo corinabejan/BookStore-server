@@ -1,3 +1,3 @@
 module.exports = {
-  apiKey: process.env.API_KEY
+  stripeKey: process.env.STRIPE_KEY
 };
