@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       image: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(60000)
       },
       review: {
         type: Sequelize.STRING(60000)

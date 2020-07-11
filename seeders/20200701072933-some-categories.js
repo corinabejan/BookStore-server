@@ -20,6 +20,11 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date()
         },
+        {
+          genre: "fantasy",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
