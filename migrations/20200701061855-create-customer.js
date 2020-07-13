@@ -25,7 +25,7 @@ module.exports = {
         allowNull: false,
       },
       streetNumber: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       postalCode: {
@@ -41,7 +41,7 @@ module.exports = {
         allowNull: false,
       },
       phoneNumber: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       createdAt: {

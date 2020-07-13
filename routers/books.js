@@ -4,7 +4,7 @@ const Book = require("../models").book;
 const Category = require("../models").category;
 
 router.get("/", async (req, res, next) => {
-  const limit = req.query.limit || 10;
+  const limit = req.query.limit || 100;
   const offset = req.query.offset || 0;
 
   try {
